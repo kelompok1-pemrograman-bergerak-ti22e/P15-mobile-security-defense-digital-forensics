@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Daftar Akun</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <div class="ion-text-center ion-margin-bottom">
+    <h2>Buat Akun Baru</h2>
+    <p>Password akan diamankan dengan bcrypt</p>
+  </div>
+
+  <ion-item>
+    <ion-input label="Username" labelPlacement="floating" [(ngModel)]="username"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-input label="Password" type="password" labelPlacement="floating" [(ngModel)]="password"></ion-input>
+  </ion-item>
+
+  <ion-button expand="block" class="ion-margin-top" (click)="register()">
+    DAFTAR
+  </ion-button>
+
+  <ion-button expand="block" fill="clear" routerLink="/login">
+    Sudah punya akun? Login
+  </ion-button>
+</ion-content>
